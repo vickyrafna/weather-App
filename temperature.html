@@ -1,0 +1,136 @@
+<Doctype html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width,
+        initial-scale=1.0"/>
+        <title>weather</title>
+        <style>
+              body{
+            align-items: center;
+            display: flex;
+            justify-content: center;
+        }
+            .img1{
+              
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 50px;
+                height: 50px;
+            }
+            h1{
+                text-align: center;
+                color: blue;
+                margin-bottom: auto;
+            }
+            h2{
+                text-align: center;
+                margin-top: auto;
+            }
+            span{
+                background-color: rgb(144, 144, 230);
+            }
+            .img2{              
+                
+                width: 18px;
+                height: 18px;
+            }
+            h3{
+                display: block;
+                text-align: center;
+                margin-top: 40px;
+            }
+            .h31{
+                text-align: center;
+                margin-top: 20px;
+            }
+            .hover1:hover, .hover2:hover, .hover3:hover{
+                background: rgb(245, 209, 226);
+            }
+            .Weather-details{
+                align-items: center;
+                background-color: white;
+                width: 400px;
+                height: 100%;
+              }
+              button{
+            display: block;
+            margin: 50px auto 8px auto;
+            color: #885df1;       
+            font-size: 18px;
+            padding: 15px 30px;
+            background: transparent;
+            border-radius: 30px;
+            border: solid blue;
+           
+        } 
+        button:hover{
+            background: blues;
+            color:  white;
+            cursor:pointer;
+        } 
+        h4{
+          text-align: center;
+          
+        }
+           
+
+        </style>
+    </head>
+    <body>
+        <div class="Weather-details">
+        <img
+        src="https://cdn-icons-png.flaticon.com/512/1779/1779940.png" class="img1">
+        <h1>Currently 21° in Tokyo</h1>
+        <h2>13° / <Span> 23°</Span></h2>
+
+        <div class="hover1">
+            <h3><img src="https://www.freeiconspng.com/thumbs/cloud-rain-icons/cloud-rain-icon-2.png" class="img2"> Tomorrow</h3>
+            <h3 class="h31">10° / 22°</h3>
+        </div>
+        <div class="hover2">
+            <h3><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTl7K1jZ0wlxLkU7NeyvqVMT5ft7Oy0X6Zaew&usqp=CAU" class="img2"> Saturday</h3>
+            <h3 class="h31">15° / 17°</h3>
+        </div>
+        <div class="hover3">
+            <h3><img src="https://icons.iconarchive.com/icons/icons-land/weather/256/Sunny-icon.png" class="img2"> Sunday</h3>
+            <h3 class="h31">25° / 38°</h3>
+        </div>
+    
+        <button onclick="changeTemperature()">Change City</button> // Function call  unsing the method onclick
+        <h4>Coded by Victorine Charlene</h4>
+    
+
+    </div>
+    
+    <script>
+/*function changeCity() {
+        let CityName = prompt("what is your city name?");
+        alert("cityName");
+    }
+       
+     let  ChangeCityButton = document.querySelector("button");
+
+     changeCityButton.addEventListener("click , changeCity");
+	 let cityName = prompt("what is your city name?");
+		let cityTemperature = prompt("what is your city Temparature?");*/
+	 
+	 function changeTemperature(){	
+		let cityName = prompt("what is your city name?");
+		let cityTemperature = prompt("what is your city Temparature?");		
+				
+		document.querySelector("h1").innerHTML = " Currently " + cityTemperature +"° in " +cityName;
+		
+		if(cityTemperature <15 ){
+			document.querySelector(".img1").src="https://icons.iconarchive.com/icons/icons-land/weather/256/Sunny-icon.png"
+		}else{
+			document.querySelector(".img1").src="https://www.mccrystalopticians.com/wp-content/uploads/2020/03/8-82835_sad-face-emoji-png-sad-face-emoji-transparent.png"
+		}
+		
+	 }
+	 
+    </script>
+
+    </body>
+    </html>

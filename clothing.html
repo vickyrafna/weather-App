@@ -1,0 +1,124 @@
+<!Doctype html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width,
+        initial-scale=1.0"/>
+        <title><Clothing</title>
+        <style>
+            h1{
+                text-align:  center;
+                color: #7d51e8;
+            }
+            h2{
+                text-align: center;
+                border: 1px solid #7d51e8;
+                padding: 15px;
+                font-size: 19px;
+                border-radius: 4px;
+            }
+            img {
+              display:block;
+              margin: 0 auto;
+              max-width:100%;
+              padding: 10px;
+              border-radius: 4px;
+            }
+            p{
+                line-height: 1,5;
+                font-size: 20px;
+                text-align: center;
+            }
+            button{
+                display: block;
+                margin: 0 auto 50px auto;     
+                font-size: 18px;
+                padding: 10px 10px;;
+                background: #7d51e8;
+                color: white;
+                border: none;
+                border-radius: 15px;
+                box-shadow: 5px 5px 5px 5px rgba( 0, 0, 0, 0.5);
+                transition: all 200ms ease-in-out;
+            }
+            .learn more{
+                display:block;
+                margin: 10px;
+                color:#7d51e8;
+                text-decoration: none;
+            }
+            .learn-more.hover{
+                text-decoration: underline;
+            }
+            button:hover {
+                    color: #fff;
+                    background: #885df1;
+           }
+          
+          
+           
+        </style>
+
+    </head>
+    <body>
+        <div class="container">
+        <h1>
+            I really like Fashion Show
+        </h1>
+        <h2>
+            Specially Fashion Week
+        </h2>
+        <img
+        src="https://media.voguebusiness.com/photos/6216413a067349b21703e5e5/master/pass/-courtesy-of-gabriela-hearst-feb-22-story.jpg"
+        alt="Fashion week"
+        width="300"
+        />
+        <p>
+           <em>fashion week</em> par <span style="color: red;font-weight:bold;">anglicisme</span>,est un événement de l'industrie <br>de la mode, durant approximativement une semaine, <br>et qui a lieu deux fois par an pour ...
+        </br />
+           <a href="https://fr.wikipedia.org/wiki/Semaine_de_la_mode"
+           class="learn more"
+           >
+            Learn more on wikipedia
+
+           </a>
+        </p>
+        <button>
+            Book Now   
+          </button>
+          <p class="footer">
+            <strong>
+            This page was built by Victorine Charlene.
+            </strong>
+          </p>
+        </div> 
+        <script>
+            function BookNow() {
+                let name = prompt("what is your name?");
+                let email = prompt("what is your email address?");
+                let country = prompt("which country are you from?")
+                let age = prompt("how old are you?");
+                if(age >= 18){
+                    alert("you can participate to Fashion Week!");
+               }else{
+                    alert("you cannot participate to Fashion Week!");
+                }
+
+                alert("Thank you for connecting with us" + name + "! we'll be grateful for your presence");
+                
+	            }
+
+             let BookButton = document.querySelector("button");
+             BookButton.addEventListener("click", BookNow);
+
+             function addTwoNums(a,b) {
+                var c = a + b;
+                console.log(c);
+             }
+             addTwoNums(2,2);
+          
+        </script> 
+         <link rel="stylesheet" href="styles.css">  
+    </body>
+    
+    </html>
